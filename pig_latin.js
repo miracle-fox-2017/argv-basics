@@ -24,7 +24,9 @@ let convert = (sentence) => {
 }
 
 let argv = process.argv.slice(2)
+// console.log(argv);
 // let argvSTR = argv.toString();
-console.log(convert(argv[0]));
+// console.log(argvSTR);
+console.log(convert(argv.join(' ')));
 
 // console.log(convert('hello'));

@@ -23,4 +23,13 @@ let convert = (sentence) => {
   return result.join(" ")
 }
 
-// Your CLI code here
+let getWords = process.argv.slice(2)
+if(getWords.length <= 1){
+  console.log('Try Again!!');
+} else {
+  let result = ''
+  getWords.forEach(listWords=>{
+    result+=listWords+' '
+  })
+  console.log(convert(result))
+}

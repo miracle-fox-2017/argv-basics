@@ -24,3 +24,9 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let argv = process.argv.slice(2);
+if(argv.length>0){
+  console.log(convert(argv.join(' ')));
+} else {
+  console.log('input salah');
+}

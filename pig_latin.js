@@ -24,3 +24,13 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let inputArgv = []
+process.argv.forEach((val, index) => {
+  if(index>1){
+    inputArgv.push(val)
+  }
+});
+
+// console.log(inputArgv.join(' '));
+let result = convert(inputArgv.join(' '))
+console.log(result);

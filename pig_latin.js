@@ -1,10 +1,9 @@
-'use strict'
-
 let pigLatin = (word) => {
   let firstLetter = word.charAt(0);
-  if(isPowel(firstLetter)){
+
+  if (isPowel(firstLetter)){
     return word
-  }else{
+  } else {
     return `${word.substr(1)}${firstLetter}ay`;
   }
 }
@@ -16,7 +15,7 @@ let isPowel = (char) => {
 let convert = (sentence) => {
   let result = []
   let words = sentence.trim().split(/\s+/g)
-  for (let i=0;i<words.length;i++) {
+  for (let i=0; i<words.length; i++) {
     result[i] = pigLatin(words[i])
   }
 
@@ -24,3 +23,6 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+const argv = process.argv;
+const sentence = `${argv[2]} ${argv[3]}`;
+console.log(convert(sentence));

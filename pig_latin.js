@@ -24,3 +24,6 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let argvPigLatin = process.argv.slice(2)
+// console.log(argvPigLatin);
+console.log(convert(argvPigLatin.join(' ')));

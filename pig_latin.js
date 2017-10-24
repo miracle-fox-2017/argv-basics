@@ -1,7 +1,7 @@
 'use strict'
 
 let pigLatin = (word) => {
-  let firstLetter = word.charAt(0);
+  let firstLetter = word.charAt(0)(0);
   if(isPowel(firstLetter)){
     return word
   }else{
@@ -24,3 +24,12 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let baru = process.argv.slice(2)
+console.log(pigLatin(baru))
+// let result = ""
+
+// for(var i = 0; i < baru.length;i++){
+//   result += pigLatin(baru[i]) + " "
+// }
+
+// console.log(result)

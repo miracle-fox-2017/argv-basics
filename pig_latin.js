@@ -1,22 +1,29 @@
 'use strict'
 
-let pigLatin = (word) => {
+let pigLatin = (word) =>
+{
+  debugger
   let firstLetter = word.charAt(0);
-  if(isPowel(firstLetter)){
+  if(isPowel(firstLetter))
+  {
     return word
-  }else{
+  }else
+  {
     return `${word.substr(1)}${firstLetter}ay`;
   }
 }
 
-let isPowel = (char) => {
+let isPowel = (char) =>
+{
   return (/^[aeiou]$/i).test(char);
 }
 
-let convert = (sentence) => {
+let convert = function(sentence)
+{
   let result = []
-  let words = sentence.trim().split(/\s+/g)
-  for (let i=0;i<words.length;i++) {
+  let words = sentence.trim().split(',')
+  for (let i=0;i<words.length;i++)
+  {
     result[i] = pigLatin(words[i])
   }
 
@@ -24,3 +31,5 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let input = process.argv.slice(2).toString();
+console.log(convert(input));

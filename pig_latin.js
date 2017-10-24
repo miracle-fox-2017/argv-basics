@@ -23,4 +23,13 @@ let convert = (sentence) => {
   return result.join(" ")
 }
 
+
+let  array = process.argv;
+// console.log(array)
+let tamp = '';
+  for(var i=2; i<array.length; i++){
+    tamp += array[i] + ' ';
+  }
+console.log(convert(tamp));
+
 // Your CLI code here

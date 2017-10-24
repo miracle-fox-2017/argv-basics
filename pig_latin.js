@@ -23,4 +23,8 @@ let convert = (sentence) => {
   return result.join(" ")
 }
 
+var arrKata = process.argv
+console.log(`${convert(arrKata[2])} ${convert(arrKata[3])}`)
+
+
 // Your CLI code here

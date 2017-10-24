@@ -23,4 +23,8 @@ let convert = (sentence) => {
   return result.join(" ")
 }
 
-// Your CLI code here
+let argv = process.argv.slice(2)
+// let argvSTR = argv.toString();
+console.log(convert(argv[0]));
+
+// console.log(convert('hello'));

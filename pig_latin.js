@@ -24,3 +24,6 @@ let convert = (sentence) => {
 }
 
 // Your CLI code here
+let argvTemp = process.argv.slice(2)
+
+console.log(convert(argvTemp.join(' ')));
